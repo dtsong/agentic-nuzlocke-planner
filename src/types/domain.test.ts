@@ -13,6 +13,9 @@ describe("Domain Types", () => {
       species_clause: true,
       shiny_clause: false,
       level_caps: true,
+      gift_clause: false,
+      cave_per_floor: false,
+      water_land_separate: false,
     };
 
     const run: Run = {

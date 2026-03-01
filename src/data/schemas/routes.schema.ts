@@ -6,6 +6,7 @@ const ROUTE_TYPES = [
   "water",
   "building",
   "safari",
+  "city",
   "gift",
   "trade",
   "static",
@@ -16,6 +17,7 @@ export const RouteSchema = z.object({
   name: z.string().min(1),
   order: z.number().int().positive(),
   type: z.enum(ROUTE_TYPES),
+  parent_location: z.string().optional(),
 });
 
 export const RoutesSchema = z.array(RouteSchema).min(1);

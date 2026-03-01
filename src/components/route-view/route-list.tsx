@@ -6,9 +6,9 @@ import { PokemonSprite } from "@/components/pokemon-sprite";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import type { EncounterEntry, RouteData, RouteEncounterData } from "@/lib/game-data";
-import { getRouteEncounters } from "@/lib/game-data";
+import { getAreaEncounters, getEncounterAreaId, getRouteEncounters } from "@/lib/game-data";
 import { getPokemonName } from "@/lib/pokemon";
-import type { RunEncounter, RunPokemon } from "@/types/domain";
+import type { NuzlockeRuleset, RunEncounter, RunPokemon } from "@/types/domain";
 
 interface RouteListProps {
   routes: RouteData[];
@@ -17,8 +17,41 @@ interface RouteListProps {
   pokemon: RunPokemon[];
   runId: string;
   currentRouteId: string;
+  ruleset: NuzlockeRuleset;
   onEncounterComplete: () => void;
   onRouteChange: (routeId: string) => void;
+}
+
+interface RouteGroup {
+  areaId: string;
+  displayName: string;
+  routes: RouteData[];
+  isGrouped: boolean;
+}
+
+function buildRouteGroups(routes: RouteData[], cavePerFloor: boolean): RouteGroup[] {
+  const sorted = [...routes].sort((a, b) => a.order - b.order);
+  const groups: RouteGroup[] = [];
+  const seen = new Set<string>();
+
+  for (const route of sorted) {
+    const areaId = cavePerFloor ? route.id : getEncounterAreaId(route);
+    if (seen.has(areaId)) continue;
+    seen.add(areaId);
+
+    if (!cavePerFloor && route.parent_location) {
+      const areaRoutes = sorted.filter((r) => getEncounterAreaId(r) === areaId);
+      const parentName = route.parent_location
+        .split("-")
+        .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+        .join(" ");
+      groups.push({ areaId, displayName: parentName, routes: areaRoutes, isGrouped: true });
+    } else {
+      groups.push({ areaId, displayName: route.name, routes: [route], isGrouped: false });
+    }
+  }
+
+  return groups;
 }
 
 export function RouteList({
@@ -28,41 +61,47 @@ export function RouteList({
   pokemon,
   runId,
   currentRouteId,
+  ruleset,
   onEncounterComplete,
   onRouteChange,
 }: RouteListProps) {
   const [encounterDialogRoute, setEncounterDialogRoute] = useState<RouteData | null>(null);
+  const [encounterDialogAreaId, setEncounterDialogAreaId] = useState<string | null>(null);
   const [encounterDialogPokemon, setEncounterDialogPokemon] = useState<EncounterEntry[]>([]);
 
-  const sortedRoutes = [...routes].sort((a, b) => a.order - b.order);
+  const groups = buildRouteGroups(routes, ruleset.cave_per_floor);
   const encounterMap = new Map(runEncounters.map((e) => [e.route_id, e]));
   const partySize = pokemon.filter((p) => p.status === "alive").length;
 
-  function getRouteStatus(route: RouteData) {
-    const enc = encounterMap.get(route.id);
+  function getAreaStatus(areaId: string) {
+    const enc = encounterMap.get(areaId);
     if (!enc) return "unvisited";
     return enc.outcome;
   }
 
-  function handleLogEncounter(route: RouteData) {
-    const available = getRouteEncounters(encounters, route.id);
+  function handleLogEncounter(group: RouteGroup) {
+    const firstRoute = group.routes[0];
+    const available = group.isGrouped
+      ? getAreaEncounters(encounters, routes, group.areaId)
+      : getRouteEncounters(encounters, firstRoute.id);
     setEncounterDialogPokemon(available);
-    setEncounterDialogRoute(route);
-    onRouteChange(route.id);
+    setEncounterDialogRoute(firstRoute);
+    setEncounterDialogAreaId(group.areaId);
+    onRouteChange(firstRoute.id);
   }
 
-  function getCaughtPokemonName(routeId: string): string | null {
-    const enc = encounterMap.get(routeId);
+  function getCaughtPokemonName(areaId: string): string | null {
+    const enc = encounterMap.get(areaId);
     if (!enc || enc.outcome !== "caught" || !enc.pokemon_id) return null;
     const poke = pokemon.find(
-      (p) => p.pokemon_id === enc.pokemon_id && p.caught_at_route_id === routeId,
+      (p) => p.pokemon_id === enc.pokemon_id && p.caught_at_route_id === enc.route_id,
     );
     if (poke) return poke.nickname;
     return getPokemonName(enc.pokemon_id);
   }
 
-  function getCaughtPokemonId(routeId: string): number | null {
-    const enc = encounterMap.get(routeId);
+  function getCaughtPokemonId(areaId: string): number | null {
+    const enc = encounterMap.get(areaId);
     if (!enc || enc.outcome !== "caught" || !enc.pokemon_id) return null;
     return enc.pokemon_id;
   }
@@ -71,21 +110,36 @@ export function RouteList({
     return pokemon.find((p) => p.death_route_id === routeId && p.status === "fainted") ?? null;
   }
 
+  function getEncounterMethodsForRoute(routeId: string): Record<string, EncounterEntry[]> {
+    const routeData = encounters.find((e) => e.route_id === routeId);
+    return routeData?.methods ?? {};
+  }
+
   return (
     <>
       <div className="space-y-1.5">
-        {sortedRoutes.map((route) => {
-          const status = getRouteStatus(route);
-          const isCurrent = route.id === currentRouteId;
-          const caughtName = getCaughtPokemonName(route.id);
-          const caughtId = getCaughtPokemonId(route.id);
-          const faintedPoke = getFaintedOnRoute(route.id);
-          const available = getRouteEncounters(encounters, route.id);
+        {groups.map((group) => {
+          const status = getAreaStatus(group.areaId);
+          const firstRoute = group.routes[0];
+          const isCurrent = group.routes.some((r) => r.id === currentRouteId);
+          const caughtName = getCaughtPokemonName(group.areaId);
+          const caughtId = getCaughtPokemonId(group.areaId);
+          const faintedPoke = group.routes
+            .map((r) => getFaintedOnRoute(r.id))
+            .find((p) => p !== null) ?? null;
+
+          const available = group.isGrouped
+            ? getAreaEncounters(encounters, routes, group.areaId)
+            : getRouteEncounters(encounters, firstRoute.id);
           const hasEncounters = available.length > 0;
+
+          const methods = getEncounterMethodsForRoute(firstRoute.id);
+          const hasTrades = "trade" in methods;
+          const hasPurchases = "purchase" in methods;
 
           return (
             <div
-              key={route.id}
+              key={group.areaId}
               className={`animate-route-enter rounded-lg border px-4 py-3 transition-colors ${
                 isCurrent
                   ? "border-accent/50 bg-surface-overlay"
@@ -94,7 +148,7 @@ export function RouteList({
                     : "border-text-muted/20 bg-surface-raised"
               }`}
               style={{
-                animationDelay: `${Math.min(route.order * 30, 300)}ms`,
+                animationDelay: `${Math.min(firstRoute.order * 30, 300)}ms`,
                 animationFillMode: "backwards",
               }}
             >
@@ -111,8 +165,13 @@ export function RouteList({
                             : "text-text-primary"
                       }`}
                     >
-                      {route.name}
+                      {group.displayName}
                     </span>
+                    {group.isGrouped && (
+                      <span className="text-[10px] text-text-muted">
+                        ({group.routes.length} floors)
+                      </span>
+                    )}
                     {isCurrent && (
                       <Badge variant="default" className="text-[10px]">
                         Current
@@ -121,6 +180,16 @@ export function RouteList({
                     {faintedPoke && (
                       <Badge variant="fainted" className="text-[10px]">
                         RIP {faintedPoke.nickname}
+                      </Badge>
+                    )}
+                    {hasTrades && (
+                      <Badge variant="outline" className="text-[10px]">
+                        Trade
+                      </Badge>
+                    )}
+                    {hasPurchases && (
+                      <Badge variant="outline" className="text-[10px]">
+                        Purchase
                       </Badge>
                     )}
                   </div>
@@ -171,7 +240,7 @@ export function RouteList({
                   <Button
                     size="sm"
                     variant={isCurrent ? "default" : "outline"}
-                    onClick={() => handleLogEncounter(route)}
+                    onClick={() => handleLogEncounter(group)}
                     className="shrink-0"
                   >
                     Log
@@ -187,13 +256,16 @@ export function RouteList({
       </div>
 
       {/* Encounter dialog */}
-      {encounterDialogRoute && (
+      {encounterDialogRoute && encounterDialogAreaId && (
         <EncounterDialog
           open={!!encounterDialogRoute}
           onOpenChange={(open) => {
-            if (!open) setEncounterDialogRoute(null);
+            if (!open) {
+              setEncounterDialogRoute(null);
+              setEncounterDialogAreaId(null);
+            }
           }}
-          routeId={encounterDialogRoute.id}
+          routeId={encounterDialogAreaId}
           routeName={encounterDialogRoute.name}
           runId={runId}
           availablePokemon={encounterDialogPokemon}

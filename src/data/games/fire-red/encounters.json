@@ -50,6 +50,9 @@
         { "pokemon_id": 19, "name": "rattata", "min_level": 2, "max_level": 5, "rate": 45 },
         { "pokemon_id": 10, "name": "caterpie", "min_level": 4, "max_level": 5, "rate": 5 },
         { "pokemon_id": 13, "name": "weedle", "min_level": 4, "max_level": 5, "rate": 5 }
+      ],
+      "trade": [
+        { "pokemon_id": 122, "name": "mr-mime", "min_level": 1, "max_level": 1, "rate": 100, "requires_pokemon_id": 63, "requires_pokemon_name": "abra" }
       ]
     }
   },
@@ -111,6 +114,9 @@
         { "pokemon_id": 21, "name": "spearow", "min_level": 8, "max_level": 12, "rate": 35 },
         { "pokemon_id": 23, "name": "ekans", "min_level": 8, "max_level": 12, "rate": 15 },
         { "pokemon_id": 56, "name": "mankey", "min_level": 8, "max_level": 12, "rate": 15 }
+      ],
+      "purchase": [
+        { "pokemon_id": 129, "name": "magikarp", "min_level": 5, "max_level": 5, "rate": 100, "cost": "500 PokeDollars" }
       ]
     }
   },
@@ -141,6 +147,14 @@
     }
   },
   {
+    "route_id": "cerulean-city",
+    "methods": {
+      "trade": [
+        { "pokemon_id": 124, "name": "jynx", "min_level": 1, "max_level": 1, "rate": 100, "requires_pokemon_id": 61, "requires_pokemon_name": "poliwhirl" }
+      ]
+    }
+  },
+  {
     "route_id": "route-5",
     "methods": {
       "walking": [
@@ -157,6 +171,21 @@
         { "pokemon_id": 16, "name": "pidgey", "min_level": 13, "max_level": 16, "rate": 40 },
         { "pokemon_id": 43, "name": "oddish", "min_level": 13, "max_level": 16, "rate": 35 },
         { "pokemon_id": 52, "name": "meowth", "min_level": 10, "max_level": 16, "rate": 25 }
+      ]
+    }
+  },
+  {
+    "route_id": "vermilion-city",
+    "methods": {
+      "trade": [
+        { "pokemon_id": 83, "name": "farfetchd", "min_level": 1, "max_level": 1, "rate": 100, "requires_pokemon_id": 21, "requires_pokemon_name": "spearow" }
+      ],
+      "fishing_old": [
+        { "pokemon_id": 129, "name": "magikarp", "min_level": 5, "max_level": 5, "rate": 100 }
+      ],
+      "fishing_good": [
+        { "pokemon_id": 116, "name": "horsea", "min_level": 5, "max_level": 15, "rate": 60 },
+        { "pokemon_id": 98, "name": "krabby", "min_level": 5, "max_level": 15, "rate": 40 }
       ]
     }
   },
@@ -266,6 +295,9 @@
         { "pokemon_id": 35, "name": "clefairy", "min_level": 8, "max_level": 8, "rate": 25 },
         { "pokemon_id": 147, "name": "dratini", "min_level": 18, "max_level": 18, "rate": 25 },
         { "pokemon_id": 123, "name": "scyther", "min_level": 25, "max_level": 25, "rate": 25 }
+      ],
+      "purchase": [
+        { "pokemon_id": 137, "name": "porygon", "min_level": 26, "max_level": 26, "rate": 100, "cost": "9999 Coins" }
       ]
     }
   },
@@ -472,6 +504,18 @@
     "methods": {
       "surfing": [
         { "pokemon_id": 72, "name": "tentacool", "min_level": 5, "max_level": 40, "rate": 100 }
+      ],
+      "fishing_old": [
+        { "pokemon_id": 129, "name": "magikarp", "min_level": 5, "max_level": 5, "rate": 100 }
+      ],
+      "fishing_good": [
+        { "pokemon_id": 116, "name": "horsea", "min_level": 5, "max_level": 15, "rate": 60 },
+        { "pokemon_id": 98, "name": "krabby", "min_level": 5, "max_level": 15, "rate": 40 }
+      ],
+      "fishing_super": [
+        { "pokemon_id": 116, "name": "horsea", "min_level": 15, "max_level": 25, "rate": 40 },
+        { "pokemon_id": 90, "name": "shellder", "min_level": 15, "max_level": 25, "rate": 40 },
+        { "pokemon_id": 120, "name": "staryu", "min_level": 15, "max_level": 25, "rate": 20 }
       ]
     }
   },
@@ -480,6 +524,18 @@
     "methods": {
       "surfing": [
         { "pokemon_id": 72, "name": "tentacool", "min_level": 5, "max_level": 40, "rate": 100 }
+      ],
+      "fishing_old": [
+        { "pokemon_id": 129, "name": "magikarp", "min_level": 5, "max_level": 5, "rate": 100 }
+      ],
+      "fishing_good": [
+        { "pokemon_id": 116, "name": "horsea", "min_level": 5, "max_level": 15, "rate": 60 },
+        { "pokemon_id": 98, "name": "krabby", "min_level": 5, "max_level": 15, "rate": 40 }
+      ],
+      "fishing_super": [
+        { "pokemon_id": 90, "name": "shellder", "min_level": 15, "max_level": 25, "rate": 40 },
+        { "pokemon_id": 116, "name": "horsea", "min_level": 15, "max_level": 25, "rate": 40 },
+        { "pokemon_id": 120, "name": "staryu", "min_level": 15, "max_level": 25, "rate": 20 }
       ]
     }
   },
@@ -506,6 +562,18 @@
     "methods": {
       "surfing": [
         { "pokemon_id": 72, "name": "tentacool", "min_level": 5, "max_level": 40, "rate": 100 }
+      ],
+      "fishing_old": [
+        { "pokemon_id": 129, "name": "magikarp", "min_level": 5, "max_level": 5, "rate": 100 }
+      ],
+      "fishing_good": [
+        { "pokemon_id": 116, "name": "horsea", "min_level": 5, "max_level": 15, "rate": 60 },
+        { "pokemon_id": 98, "name": "krabby", "min_level": 5, "max_level": 15, "rate": 40 }
+      ],
+      "fishing_super": [
+        { "pokemon_id": 90, "name": "shellder", "min_level": 15, "max_level": 25, "rate": 40 },
+        { "pokemon_id": 116, "name": "horsea", "min_level": 15, "max_level": 25, "rate": 40 },
+        { "pokemon_id": 120, "name": "staryu", "min_level": 15, "max_level": 25, "rate": 20 }
       ]
     }
   },
@@ -530,6 +598,11 @@
         { "pokemon_id": 138, "name": "omanyte", "min_level": 5, "max_level": 5, "rate": 33 },
         { "pokemon_id": 140, "name": "kabuto", "min_level": 5, "max_level": 5, "rate": 33 },
         { "pokemon_id": 142, "name": "aerodactyl", "min_level": 5, "max_level": 5, "rate": 34 }
+      ],
+      "trade": [
+        { "pokemon_id": 101, "name": "electrode", "min_level": 1, "max_level": 1, "rate": 33, "requires_pokemon_id": 26, "requires_pokemon_name": "raichu" },
+        { "pokemon_id": 114, "name": "tangela", "min_level": 1, "max_level": 1, "rate": 33, "requires_pokemon_id": 48, "requires_pokemon_name": "venonat" },
+        { "pokemon_id": 86, "name": "seel", "min_level": 1, "max_level": 1, "rate": 34, "requires_pokemon_id": 77, "requires_pokemon_name": "ponyta" }
       ]
     }
   },

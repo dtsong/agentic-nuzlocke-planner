@@ -16,6 +16,9 @@ export interface NuzlockeRuleset {
   species_clause: boolean;
   shiny_clause: boolean;
   level_caps: boolean;
+  gift_clause: boolean;
+  cave_per_floor: boolean;
+  water_land_separate: boolean;
 }
 
 export interface RunPokemon {

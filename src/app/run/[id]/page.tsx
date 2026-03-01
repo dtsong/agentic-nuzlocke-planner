@@ -120,6 +120,7 @@ export default function RunPage() {
             pokemon={pokemon}
             runId={run.id}
             currentRouteId={run.current_route_id}
+            ruleset={run.ruleset}
             onEncounterComplete={refresh}
             onRouteChange={handleRouteChange}
           />

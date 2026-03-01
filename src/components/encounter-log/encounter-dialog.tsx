@@ -13,7 +13,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import type { EncounterEntry } from "@/lib/game-data";
+import type { EncounterEntry, PurchaseEncounterEntry, TradeEncounterEntry } from "@/lib/game-data";
 import { getPokemonName, getPokemonTypes } from "@/lib/pokemon";
 import { generateId, saveEncounter, saveTeamPokemon } from "@/lib/storage";
 import type { RunEncounter, RunPokemon } from "@/types/domain";
@@ -146,6 +146,10 @@ export function EncounterDialog({
             <div className="max-h-64 space-y-1.5 overflow-y-auto pr-1">
               {availablePokemon.map((entry) => {
                 const types = getPokemonTypes(entry.pokemon_id);
+                const tradeEntry = entry as Partial<TradeEncounterEntry>;
+                const purchaseEntry = entry as Partial<PurchaseEncounterEntry>;
+                const isTrade = "requires_pokemon_name" in entry;
+                const isPurchase = "cost" in entry;
                 return (
                   <button
                     key={entry.pokemon_id}
@@ -158,9 +162,21 @@ export function EncounterDialog({
                       name={getPokemonName(entry.pokemon_id)}
                       size="sm"
                     />
-                    <span className="text-sm font-medium text-text-primary flex-1">
-                      {getPokemonName(entry.pokemon_id)}
-                    </span>
+                    <div className="flex-1 min-w-0">
+                      <span className="text-sm font-medium text-text-primary">
+                        {getPokemonName(entry.pokemon_id)}
+                      </span>
+                      {isTrade && tradeEntry.requires_pokemon_name && (
+                        <div className="text-[10px] text-text-muted">
+                          Requires: {tradeEntry.requires_pokemon_name}
+                        </div>
+                      )}
+                      {isPurchase && purchaseEntry.cost && (
+                        <div className="text-[10px] text-text-muted">
+                          Cost: {purchaseEntry.cost}
+                        </div>
+                      )}
+                    </div>
                     <span className="flex items-center gap-1">
                       {types.map((t) => (
                         <TypeBadge key={t} type={t} />

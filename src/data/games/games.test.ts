@@ -87,6 +87,52 @@ describe("FireRed routes.json", () => {
     expect(ids).toContain("victory-road-1f");
     expect(ids).toContain("cerulean-cave");
   });
+
+  it("parent_location values should group related cave floors", () => {
+    const byId = Object.fromEntries(fireRedRoutes.map((r) => [r.id, r]));
+
+    // Mt. Moon floors
+    for (const id of ["mt-moon-1f", "mt-moon-b1f", "mt-moon-b2f"]) {
+      expect((byId[id] as Record<string, unknown>).parent_location).toBe("mt-moon");
+    }
+
+    // Rock Tunnel floors
+    for (const id of ["rock-tunnel-1f", "rock-tunnel-b1f"]) {
+      expect((byId[id] as Record<string, unknown>).parent_location).toBe("rock-tunnel");
+    }
+
+    // Victory Road floors
+    for (const id of ["victory-road-1f", "victory-road-2f", "victory-road-3f"]) {
+      expect((byId[id] as Record<string, unknown>).parent_location).toBe("victory-road");
+    }
+  });
+
+  it("should include city locations", () => {
+    const byId = Object.fromEntries(fireRedRoutes.map((r) => [r.id, r]));
+    expect(byId["vermilion-city"]).toBeDefined();
+    expect(byId["vermilion-city"].type).toBe("city");
+    expect(byId["cerulean-city"]).toBeDefined();
+    expect(byId["cerulean-city"].type).toBe("city");
+  });
+
+  it("routes with the same parent_location should share the same type", () => {
+    const routesWithParent = fireRedRoutes.filter(
+      (r) => "parent_location" in r && r.parent_location,
+    );
+    const groups = new Map<string, string[]>();
+    for (const route of routesWithParent) {
+      const parent = (route as Record<string, unknown>).parent_location as string;
+      if (!groups.has(parent)) groups.set(parent, []);
+      groups.get(parent)!.push(route.type);
+    }
+    for (const [parent, types] of groups) {
+      const uniqueTypes = new Set(types);
+      expect(
+        uniqueTypes.size,
+        `Routes with parent_location "${parent}" have inconsistent types: ${[...uniqueTypes].join(", ")}`,
+      ).toBe(1);
+    }
+  });
 });
 
 describe("FireRed encounters.json", () => {
@@ -141,6 +187,74 @@ describe("FireRed encounters.json", () => {
     expect(silph).toBeDefined();
     const giftIds = silph!.methods.gift?.map((g) => g.pokemon_id) ?? [];
     expect(giftIds).toContain(131);
+  });
+
+  it("should include trade encounters with valid pokemon", () => {
+    // Route 2: Mr. Mime trade
+    const route2 = fireRedEncounters.find((e) => e.route_id === "route-2");
+    expect(route2).toBeDefined();
+    expect(route2!.methods.trade).toBeDefined();
+    const route2TradeIds = route2!.methods.trade!.map((t) => t.pokemon_id);
+    expect(route2TradeIds).toContain(122); // Mr. Mime
+
+    // Vermilion City: Farfetch'd trade
+    const vermilion = fireRedEncounters.find((e) => e.route_id === "vermilion-city");
+    expect(vermilion).toBeDefined();
+    expect(vermilion!.methods.trade).toBeDefined();
+    const vermilionTradeIds = vermilion!.methods.trade!.map((t) => t.pokemon_id);
+    expect(vermilionTradeIds).toContain(83); // Farfetch'd
+
+    // Cinnabar Lab: trade encounters
+    const cinnabar = fireRedEncounters.find((e) => e.route_id === "cinnabar-lab");
+    expect(cinnabar).toBeDefined();
+    expect(cinnabar!.methods.trade).toBeDefined();
+    expect(cinnabar!.methods.trade!.length).toBeGreaterThan(0);
+  });
+
+  it("trade encounters should have valid pokemon_ids for both received and required pokemon", () => {
+    for (const route of fireRedEncounters) {
+      if (!route.methods.trade) continue;
+      for (const trade of route.methods.trade) {
+        expect(
+          validPokemonIds.has(trade.pokemon_id),
+          `Trade on ${route.route_id}: received pokemon_id ${trade.pokemon_id} not in pokemon-index`,
+        ).toBe(true);
+        const req = trade as Record<string, unknown>;
+        if (req.requires_pokemon_id != null) {
+          expect(
+            validPokemonIds.has(req.requires_pokemon_id as number),
+            `Trade on ${route.route_id}: requires_pokemon_id ${req.requires_pokemon_id} not in pokemon-index`,
+          ).toBe(true);
+        }
+      }
+    }
+  });
+
+  it("should include purchase encounters", () => {
+    // Route 4: Magikarp purchase
+    const route4 = fireRedEncounters.find((e) => e.route_id === "route-4");
+    expect(route4).toBeDefined();
+    expect(route4!.methods.purchase).toBeDefined();
+    const route4PurchaseIds = route4!.methods.purchase!.map((p) => p.pokemon_id);
+    expect(route4PurchaseIds).toContain(129); // Magikarp
+
+    // Celadon Game Corner: Porygon purchase
+    const celadon = fireRedEncounters.find((e) => e.route_id === "celadon-game-corner");
+    expect(celadon).toBeDefined();
+    expect(celadon!.methods.purchase).toBeDefined();
+    const celadonPurchaseIds = celadon!.methods.purchase!.map((p) => p.pokemon_id);
+    expect(celadonPurchaseIds).toContain(137); // Porygon
+  });
+
+  it("should include fishing encounters on water routes", () => {
+    const route19 = fireRedEncounters.find((e) => e.route_id === "route-19");
+    expect(route19).toBeDefined();
+    expect(route19!.methods.fishing_old).toBeDefined();
+    expect(route19!.methods.fishing_old!.length).toBeGreaterThan(0);
+    expect(route19!.methods.fishing_good).toBeDefined();
+    expect(route19!.methods.fishing_good!.length).toBeGreaterThan(0);
+    expect(route19!.methods.fishing_super).toBeDefined();
+    expect(route19!.methods.fishing_super!.length).toBeGreaterThan(0);
   });
 });
 
@@ -199,6 +313,14 @@ describe("LeafGreen encounters.json", () => {
       ),
     );
     expect(hasPinsir).toBe(true);
+  });
+
+  it("should include Porygon purchase at Game Corner", () => {
+    const celadon = leafGreenEncounters.find((e) => e.route_id === "celadon-game-corner");
+    expect(celadon).toBeDefined();
+    expect(celadon!.methods.purchase).toBeDefined();
+    const purchaseIds = celadon!.methods.purchase!.map((p) => p.pokemon_id);
+    expect(purchaseIds).toContain(137); // Porygon
   });
 });
 

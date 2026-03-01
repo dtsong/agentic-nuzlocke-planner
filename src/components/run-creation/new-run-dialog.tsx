@@ -27,6 +27,9 @@ export function NewRunDialog({ children }: { children: React.ReactNode }) {
     species_clause: true,
     shiny_clause: false,
     level_caps: true,
+    gift_clause: true,
+    cave_per_floor: false,
+    water_land_separate: true,
   });
 
   function handleCreate() {
@@ -116,6 +119,9 @@ export function NewRunDialog({ children }: { children: React.ReactNode }) {
                   ["species_clause", "Species Clause", "Treat evolutions as the same species"],
                   ["shiny_clause", "Shiny Clause", "Shiny Pokemon may always be caught"],
                   ["level_caps", "Level Caps", "Enforce gym leader level caps"],
+                  ["gift_clause", "Gift Clause", "Gifts don't consume location encounters"],
+                  ["cave_per_floor", "Cave Per Floor", "Each cave floor is a separate encounter"],
+                  ["water_land_separate", "Water/Land Separate", "Surf/fishing is separate from walking"],
                 ] as const
               ).map(([key, label, desc]) => (
                 <button

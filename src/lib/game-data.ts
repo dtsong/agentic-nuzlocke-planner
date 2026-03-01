@@ -32,6 +32,16 @@ export interface RouteData {
   name: string;
   order: number;
   type: string;
+  parent_location?: string;
+}
+
+export interface TradeEncounterEntry extends EncounterEntry {
+  requires_pokemon_id: number;
+  requires_pokemon_name: string;
+}
+
+export interface PurchaseEncounterEntry extends EncounterEntry {
+  cost: string;
 }
 
 export interface BossEntry {
@@ -137,6 +147,49 @@ export function getRouteEncounters(
       if (!seen.has(entry.pokemon_id)) {
         seen.add(entry.pokemon_id);
         result.push(entry);
+      }
+    }
+  }
+
+  return result;
+}
+
+/**
+ * Get the encounter area key for a route (respects parent_location grouping).
+ */
+export function getEncounterAreaId(route: RouteData): string {
+  return route.parent_location ?? route.id;
+}
+
+/**
+ * Get all routes that share an encounter area.
+ */
+export function getRoutesInArea(routes: RouteData[], areaId: string): RouteData[] {
+  return routes.filter((r) => getEncounterAreaId(r) === areaId);
+}
+
+/**
+ * Get combined encounters for an area (merges all floors), deduplicated by pokemon_id.
+ */
+export function getAreaEncounters(
+  encounters: RouteEncounterData[],
+  routes: RouteData[],
+  areaId: string,
+): EncounterEntry[] {
+  const areaRoutes = getRoutesInArea(routes, areaId);
+  const seen = new Set<number>();
+  const result: EncounterEntry[] = [];
+
+  for (const route of areaRoutes) {
+    const routeEncounters = encounters.find((e) => e.route_id === route.id);
+    if (!routeEncounters) continue;
+
+    for (const entries of Object.values(routeEncounters.methods)) {
+      for (const entry of entries) {
+        if (!seen.has(entry.pokemon_id)) {
+          seen.add(entry.pokemon_id);
+          result.push(entry);
+        }
       }
     }
   }
