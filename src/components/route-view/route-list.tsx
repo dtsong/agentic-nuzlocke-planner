@@ -124,9 +124,8 @@ export function RouteList({
           const isCurrent = group.routes.some((r) => r.id === currentRouteId);
           const caughtName = getCaughtPokemonName(group.areaId);
           const caughtId = getCaughtPokemonId(group.areaId);
-          const faintedPoke = group.routes
-            .map((r) => getFaintedOnRoute(r.id))
-            .find((p) => p !== null) ?? null;
+          const faintedPoke =
+            group.routes.map((r) => getFaintedOnRoute(r.id)).find((p) => p !== null) ?? null;
 
           const available = group.isGrouped
             ? getAreaEncounters(encounters, routes, group.areaId)

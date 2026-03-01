@@ -121,7 +121,11 @@ export function NewRunDialog({ children }: { children: React.ReactNode }) {
                   ["level_caps", "Level Caps", "Enforce gym leader level caps"],
                   ["gift_clause", "Gift Clause", "Gifts don't consume location encounters"],
                   ["cave_per_floor", "Cave Per Floor", "Each cave floor is a separate encounter"],
-                  ["water_land_separate", "Water/Land Separate", "Surf/fishing is separate from walking"],
+                  [
+                    "water_land_separate",
+                    "Water/Land Separate",
+                    "Surf/fishing is separate from walking",
+                  ],
                 ] as const
               ).map(([key, label, desc]) => (
                 <button

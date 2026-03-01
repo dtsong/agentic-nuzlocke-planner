@@ -1,6 +1,12 @@
 export type { Boss, Bosses, BossPokemon } from "./bosses.schema";
 export { BossesSchema, BossPokemonSchema, BossSchema } from "./bosses.schema";
-export type { EncounterEntry, Encounters, PurchaseEncounterEntry, RouteEncounter, TradeEncounterEntry } from "./encounters.schema";
+export type {
+  EncounterEntry,
+  Encounters,
+  PurchaseEncounterEntry,
+  RouteEncounter,
+  TradeEncounterEntry,
+} from "./encounters.schema";
 export {
   EncounterEntrySchema,
   EncounterMethodsSchema,
