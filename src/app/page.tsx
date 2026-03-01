@@ -118,13 +118,16 @@ export default function Home() {
           <div className="mb-6 flex items-center justify-center gap-3">
             <span className="h-px w-12 bg-accent/40" />
             <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent/70">
-              Field Journal
+              Trainer Lab
             </span>
             <span className="h-px w-12 bg-accent/40" />
           </div>
 
-          <h1 className="font-display text-4xl font-bold tracking-tight text-text-primary sm:text-5xl lg:text-6xl">
-            Nuzlocke Route Planner
+          <h1 className="font-display font-bold tracking-tight text-text-primary">
+            <span className="block text-4xl sm:text-5xl lg:text-6xl">Trainer Lab</span>
+            <span className="mt-1 block text-xl text-text-body sm:text-2xl lg:text-3xl">
+              Nuzlocke Route Planner
+            </span>
           </h1>
 
           <p className="mx-auto mt-4 max-w-lg text-lg text-text-body sm:text-xl">
@@ -196,7 +199,7 @@ export default function Home() {
             A fan project. Pokemon is &copy; Nintendo / Game Freak / Creatures Inc.
           </p>
           <p className="mt-2 font-mono text-xs text-text-muted">
-            v0.1.0 &mdash; Field Journal Edition
+            v0.1.0 &mdash; Trainer Lab Field Journal Edition
           </p>
         </div>
       </footer>

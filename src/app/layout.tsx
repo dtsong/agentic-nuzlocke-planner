@@ -16,9 +16,34 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nuzlocke Route Planner",
+  metadataBase: new URL("https://trainerlab.io"),
+  title: {
+    default: "Trainer Lab — Nuzlocke Route Planner",
+    template: "%s | Trainer Lab",
+  },
   description:
-    "An intelligent route planner for Pokemon Nuzlocke runs. Plan encounters, analyze type coverage, and prepare for boss battles.",
+    "Plan your Pokemon Nuzlocke run with Trainer Lab. Route encounters, analyze type coverage, and prepare for boss battles across FireRed, LeafGreen, and more.",
+  keywords: [
+    "nuzlocke",
+    "nuzlocke planner",
+    "pokemon nuzlocke",
+    "route planner",
+    "nuzlocke tracker",
+    "trainer lab",
+    "type coverage",
+    "pokemon challenge run",
+  ],
+  openGraph: {
+    title: "Trainer Lab — Nuzlocke Route Planner",
+    description:
+      "Plan your Pokemon Nuzlocke run with Trainer Lab. Route encounters, analyze type coverage, and prepare for boss battles across FireRed, LeafGreen, and more.",
+    url: "https://trainerlab.io",
+    siteName: "Trainer Lab",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
