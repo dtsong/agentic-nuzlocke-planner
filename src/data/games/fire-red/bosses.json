@@ -1,0 +1,682 @@
+[
+  {
+    "id": "rival-1",
+    "name": "Rival (Oak's Lab)",
+    "type": "rival",
+    "location": "pallet-town",
+    "pokemon": [
+      {
+        "pokemon_id": 7,
+        "name": "squirtle",
+        "level": 5,
+        "types": ["water"],
+        "moves": ["tackle", "tail-whip"],
+        "ability": "torrent"
+      }
+    ]
+  },
+  {
+    "id": "rival-2",
+    "name": "Rival (Route 22)",
+    "type": "rival",
+    "location": "route-22",
+    "pokemon": [
+      {
+        "pokemon_id": 16,
+        "name": "pidgey",
+        "level": 9,
+        "types": ["normal", "flying"],
+        "moves": ["tackle", "sand-attack", "gust"],
+        "ability": "keen-eye"
+      },
+      {
+        "pokemon_id": 8,
+        "name": "wartortle",
+        "level": 9,
+        "types": ["water"],
+        "moves": ["tackle", "tail-whip", "water-gun"],
+        "ability": "torrent"
+      }
+    ]
+  },
+  {
+    "id": "brock",
+    "name": "Brock",
+    "type": "gym_leader",
+    "location": "pewter-city-gym",
+    "badge": "boulder-badge",
+    "badge_number": 1,
+    "specialty_type": "rock",
+    "pokemon": [
+      {
+        "pokemon_id": 74,
+        "name": "geodude",
+        "level": 12,
+        "types": ["rock", "ground"],
+        "moves": ["tackle", "defense-curl"],
+        "ability": "rock-head"
+      },
+      {
+        "pokemon_id": 95,
+        "name": "onix",
+        "level": 14,
+        "types": ["rock", "ground"],
+        "moves": ["tackle", "bind", "rock-tomb"],
+        "ability": "rock-head"
+      }
+    ]
+  },
+  {
+    "id": "rival-3",
+    "name": "Rival (Cerulean City)",
+    "type": "rival",
+    "location": "cerulean-city",
+    "pokemon": [
+      {
+        "pokemon_id": 16,
+        "name": "pidgey",
+        "level": 17,
+        "types": ["normal", "flying"],
+        "moves": ["gust", "sand-attack", "quick-attack"],
+        "ability": "keen-eye"
+      },
+      {
+        "pokemon_id": 63,
+        "name": "abra",
+        "level": 16,
+        "types": ["psychic"],
+        "moves": ["teleport"],
+        "ability": "synchronize"
+      },
+      {
+        "pokemon_id": 19,
+        "name": "rattata",
+        "level": 15,
+        "types": ["normal"],
+        "moves": ["tackle", "tail-whip", "quick-attack", "hyper-fang"],
+        "ability": "run-away"
+      },
+      {
+        "pokemon_id": 8,
+        "name": "wartortle",
+        "level": 18,
+        "types": ["water"],
+        "moves": ["water-gun", "withdraw", "tackle", "bite"],
+        "ability": "torrent"
+      }
+    ]
+  },
+  {
+    "id": "misty",
+    "name": "Misty",
+    "type": "gym_leader",
+    "location": "cerulean-city-gym",
+    "badge": "cascade-badge",
+    "badge_number": 2,
+    "specialty_type": "water",
+    "pokemon": [
+      {
+        "pokemon_id": 120,
+        "name": "staryu",
+        "level": 18,
+        "types": ["water"],
+        "moves": ["swift", "recover", "water-pulse", "harden"],
+        "ability": "illuminate"
+      },
+      {
+        "pokemon_id": 121,
+        "name": "starmie",
+        "level": 21,
+        "types": ["water", "psychic"],
+        "moves": ["swift", "recover", "water-pulse", "confuse-ray"],
+        "ability": "illuminate"
+      }
+    ]
+  },
+  {
+    "id": "rival-4",
+    "name": "Rival (Pokemon Tower)",
+    "type": "rival",
+    "location": "pokemon-tower",
+    "pokemon": [
+      {
+        "pokemon_id": 17,
+        "name": "pidgeotto",
+        "level": 25,
+        "types": ["normal", "flying"],
+        "moves": ["gust", "quick-attack", "sand-attack", "wing-attack"],
+        "ability": "keen-eye"
+      },
+      {
+        "pokemon_id": 130,
+        "name": "gyarados",
+        "level": 23,
+        "types": ["water", "flying"],
+        "moves": ["thrash", "bite", "dragon-rage", "leer"],
+        "ability": "intimidate"
+      },
+      {
+        "pokemon_id": 58,
+        "name": "growlithe",
+        "level": 22,
+        "types": ["fire"],
+        "moves": ["ember", "leer", "bite", "take-down"],
+        "ability": "intimidate"
+      },
+      {
+        "pokemon_id": 64,
+        "name": "kadabra",
+        "level": 20,
+        "types": ["psychic"],
+        "moves": ["confusion", "disable", "psybeam"],
+        "ability": "synchronize"
+      },
+      {
+        "pokemon_id": 8,
+        "name": "wartortle",
+        "level": 25,
+        "types": ["water"],
+        "moves": ["water-gun", "bite", "rapid-spin", "water-pulse"],
+        "ability": "torrent"
+      }
+    ]
+  },
+  {
+    "id": "lt-surge",
+    "name": "Lt. Surge",
+    "type": "gym_leader",
+    "location": "vermilion-city-gym",
+    "badge": "thunder-badge",
+    "badge_number": 3,
+    "specialty_type": "electric",
+    "pokemon": [
+      {
+        "pokemon_id": 100,
+        "name": "voltorb",
+        "level": 21,
+        "types": ["electric"],
+        "moves": ["sonic-boom", "spark", "self-destruct", "screech"],
+        "ability": "soundproof"
+      },
+      {
+        "pokemon_id": 25,
+        "name": "pikachu",
+        "level": 18,
+        "types": ["electric"],
+        "moves": ["quick-attack", "thunder-wave", "double-team", "shock-wave"],
+        "ability": "static"
+      },
+      {
+        "pokemon_id": 26,
+        "name": "raichu",
+        "level": 24,
+        "types": ["electric"],
+        "moves": ["shock-wave", "quick-attack", "thunder-wave", "double-team"],
+        "ability": "static"
+      }
+    ]
+  },
+  {
+    "id": "erika",
+    "name": "Erika",
+    "type": "gym_leader",
+    "location": "celadon-city-gym",
+    "badge": "rainbow-badge",
+    "badge_number": 4,
+    "specialty_type": "grass",
+    "pokemon": [
+      {
+        "pokemon_id": 71,
+        "name": "victreebel",
+        "level": 29,
+        "types": ["grass", "poison"],
+        "moves": ["stun-spore", "acid", "giga-drain", "poison-powder"],
+        "ability": "chlorophyll"
+      },
+      {
+        "pokemon_id": 114,
+        "name": "tangela",
+        "level": 24,
+        "types": ["grass"],
+        "moves": ["constrict", "ingrain", "giga-drain", "poison-powder"],
+        "ability": "chlorophyll"
+      },
+      {
+        "pokemon_id": 45,
+        "name": "vileplume",
+        "level": 29,
+        "types": ["grass", "poison"],
+        "moves": ["stun-spore", "acid", "giga-drain", "sleep-powder"],
+        "ability": "chlorophyll"
+      }
+    ]
+  },
+  {
+    "id": "koga",
+    "name": "Koga",
+    "type": "gym_leader",
+    "location": "fuchsia-city-gym",
+    "badge": "soul-badge",
+    "badge_number": 5,
+    "specialty_type": "poison",
+    "pokemon": [
+      {
+        "pokemon_id": 109,
+        "name": "koffing",
+        "level": 37,
+        "types": ["poison"],
+        "moves": ["self-destruct", "sludge", "smokescreen", "tackle"],
+        "ability": "levitate"
+      },
+      {
+        "pokemon_id": 89,
+        "name": "muk",
+        "level": 39,
+        "types": ["poison"],
+        "moves": ["minimize", "sludge", "acid-armor", "toxic"],
+        "ability": "stench"
+      },
+      {
+        "pokemon_id": 109,
+        "name": "koffing",
+        "level": 37,
+        "types": ["poison"],
+        "moves": ["self-destruct", "sludge", "smokescreen", "tackle"],
+        "ability": "levitate"
+      },
+      {
+        "pokemon_id": 110,
+        "name": "weezing",
+        "level": 43,
+        "types": ["poison"],
+        "moves": ["self-destruct", "sludge", "smokescreen", "toxic"],
+        "ability": "levitate"
+      }
+    ]
+  },
+  {
+    "id": "sabrina",
+    "name": "Sabrina",
+    "type": "gym_leader",
+    "location": "saffron-city-gym",
+    "badge": "marsh-badge",
+    "badge_number": 6,
+    "specialty_type": "psychic",
+    "pokemon": [
+      {
+        "pokemon_id": 64,
+        "name": "kadabra",
+        "level": 38,
+        "types": ["psychic"],
+        "moves": ["psybeam", "reflect", "future-sight", "calm-mind"],
+        "ability": "synchronize"
+      },
+      {
+        "pokemon_id": 122,
+        "name": "mr-mime",
+        "level": 37,
+        "types": ["psychic", "fairy"],
+        "moves": ["barrier", "psybeam", "baton-pass", "calm-mind"],
+        "ability": "soundproof"
+      },
+      {
+        "pokemon_id": 49,
+        "name": "venomoth",
+        "level": 38,
+        "types": ["bug", "poison"],
+        "moves": ["psybeam", "gust", "leech-life", "supersonic"],
+        "ability": "shield-dust"
+      },
+      {
+        "pokemon_id": 65,
+        "name": "alakazam",
+        "level": 43,
+        "types": ["psychic"],
+        "moves": ["psychic", "reflect", "future-sight", "calm-mind"],
+        "ability": "synchronize"
+      }
+    ]
+  },
+  {
+    "id": "blaine",
+    "name": "Blaine",
+    "type": "gym_leader",
+    "location": "cinnabar-island-gym",
+    "badge": "volcano-badge",
+    "badge_number": 7,
+    "specialty_type": "fire",
+    "pokemon": [
+      {
+        "pokemon_id": 58,
+        "name": "growlithe",
+        "level": 42,
+        "types": ["fire"],
+        "moves": ["ember", "take-down", "fire-blast", "leer"],
+        "ability": "intimidate"
+      },
+      {
+        "pokemon_id": 77,
+        "name": "ponyta",
+        "level": 40,
+        "types": ["fire"],
+        "moves": ["stomp", "bounce", "fire-blast", "fire-spin"],
+        "ability": "flash-fire"
+      },
+      {
+        "pokemon_id": 78,
+        "name": "rapidash",
+        "level": 42,
+        "types": ["fire"],
+        "moves": ["stomp", "bounce", "fire-blast", "fire-spin"],
+        "ability": "flash-fire"
+      },
+      {
+        "pokemon_id": 59,
+        "name": "arcanine",
+        "level": 47,
+        "types": ["fire"],
+        "moves": ["extreme-speed", "flamethrower", "bite", "take-down"],
+        "ability": "intimidate"
+      }
+    ]
+  },
+  {
+    "id": "giovanni",
+    "name": "Giovanni",
+    "type": "gym_leader",
+    "location": "viridian-city-gym",
+    "badge": "earth-badge",
+    "badge_number": 8,
+    "specialty_type": "ground",
+    "pokemon": [
+      {
+        "pokemon_id": 111,
+        "name": "rhyhorn",
+        "level": 45,
+        "types": ["ground", "rock"],
+        "moves": ["earthquake", "take-down", "horn-drill", "rock-blast"],
+        "ability": "lightning-rod"
+      },
+      {
+        "pokemon_id": 51,
+        "name": "dugtrio",
+        "level": 42,
+        "types": ["ground"],
+        "moves": ["earthquake", "slash", "sand-tomb", "mud-slap"],
+        "ability": "arena-trap"
+      },
+      {
+        "pokemon_id": 31,
+        "name": "nidoqueen",
+        "level": 44,
+        "types": ["poison", "ground"],
+        "moves": ["earthquake", "body-slam", "double-kick", "poison-sting"],
+        "ability": "poison-point"
+      },
+      {
+        "pokemon_id": 34,
+        "name": "nidoking",
+        "level": 45,
+        "types": ["poison", "ground"],
+        "moves": ["earthquake", "thrash", "double-kick", "poison-sting"],
+        "ability": "poison-point"
+      },
+      {
+        "pokemon_id": 112,
+        "name": "rhydon",
+        "level": 50,
+        "types": ["ground", "rock"],
+        "moves": ["earthquake", "take-down", "megahorn", "rock-blast"],
+        "ability": "lightning-rod"
+      }
+    ]
+  },
+  {
+    "id": "lorelei",
+    "name": "Lorelei",
+    "type": "elite_four",
+    "location": "indigo-plateau",
+    "pokemon": [
+      {
+        "pokemon_id": 87,
+        "name": "dewgong",
+        "level": 52,
+        "types": ["water", "ice"],
+        "moves": ["ice-beam", "surf", "hail", "body-slam"],
+        "ability": "thick-fat"
+      },
+      {
+        "pokemon_id": 91,
+        "name": "cloyster",
+        "level": 51,
+        "types": ["water", "ice"],
+        "moves": ["protect", "hail", "ice-beam", "dive"],
+        "ability": "shell-armor"
+      },
+      {
+        "pokemon_id": 80,
+        "name": "slowbro",
+        "level": 52,
+        "types": ["water", "psychic"],
+        "moves": ["surf", "yawn", "amnesia", "ice-beam"],
+        "ability": "oblivious"
+      },
+      {
+        "pokemon_id": 124,
+        "name": "jynx",
+        "level": 54,
+        "types": ["ice", "psychic"],
+        "moves": ["ice-punch", "lovely-kiss", "attract", "double-slap"],
+        "ability": "oblivious"
+      },
+      {
+        "pokemon_id": 131,
+        "name": "lapras",
+        "level": 54,
+        "types": ["water", "ice"],
+        "moves": ["confuse-ray", "ice-beam", "surf", "body-slam"],
+        "ability": "water-absorb"
+      }
+    ]
+  },
+  {
+    "id": "bruno",
+    "name": "Bruno",
+    "type": "elite_four",
+    "location": "indigo-plateau",
+    "pokemon": [
+      {
+        "pokemon_id": 95,
+        "name": "onix",
+        "level": 51,
+        "types": ["rock", "ground"],
+        "moves": ["earthquake", "rock-tomb", "iron-tail", "roar"],
+        "ability": "rock-head"
+      },
+      {
+        "pokemon_id": 107,
+        "name": "hitmonchan",
+        "level": 53,
+        "types": ["fighting"],
+        "moves": ["sky-uppercut", "mach-punch", "rock-tomb", "counter"],
+        "ability": "keen-eye"
+      },
+      {
+        "pokemon_id": 106,
+        "name": "hitmonlee",
+        "level": 53,
+        "types": ["fighting"],
+        "moves": ["mega-kick", "foresight", "brick-break", "bulk-up"],
+        "ability": "limber"
+      },
+      {
+        "pokemon_id": 95,
+        "name": "onix",
+        "level": 54,
+        "types": ["rock", "ground"],
+        "moves": ["earthquake", "rock-tomb", "iron-tail", "double-edge"],
+        "ability": "rock-head"
+      },
+      {
+        "pokemon_id": 68,
+        "name": "machamp",
+        "level": 56,
+        "types": ["fighting"],
+        "moves": ["cross-chop", "bulk-up", "scary-face", "rock-tomb"],
+        "ability": "guts"
+      }
+    ]
+  },
+  {
+    "id": "agatha",
+    "name": "Agatha",
+    "type": "elite_four",
+    "location": "indigo-plateau",
+    "pokemon": [
+      {
+        "pokemon_id": 94,
+        "name": "gengar",
+        "level": 54,
+        "types": ["ghost", "poison"],
+        "moves": ["shadow-punch", "confuse-ray", "toxic", "hypnosis"],
+        "ability": "levitate"
+      },
+      {
+        "pokemon_id": 42,
+        "name": "golbat",
+        "level": 54,
+        "types": ["poison", "flying"],
+        "moves": ["confuse-ray", "bite", "air-cutter", "poison-fang"],
+        "ability": "inner-focus"
+      },
+      {
+        "pokemon_id": 93,
+        "name": "haunter",
+        "level": 53,
+        "types": ["ghost", "poison"],
+        "moves": ["shadow-punch", "confuse-ray", "curse", "hypnosis"],
+        "ability": "levitate"
+      },
+      {
+        "pokemon_id": 24,
+        "name": "arbok",
+        "level": 56,
+        "types": ["poison"],
+        "moves": ["screech", "sludge-bomb", "iron-tail", "bite"],
+        "ability": "intimidate"
+      },
+      {
+        "pokemon_id": 94,
+        "name": "gengar",
+        "level": 58,
+        "types": ["ghost", "poison"],
+        "moves": ["shadow-ball", "sludge-bomb", "confuse-ray", "hypnosis"],
+        "ability": "levitate"
+      }
+    ]
+  },
+  {
+    "id": "lance",
+    "name": "Lance",
+    "type": "elite_four",
+    "location": "indigo-plateau",
+    "pokemon": [
+      {
+        "pokemon_id": 130,
+        "name": "gyarados",
+        "level": 56,
+        "types": ["water", "flying"],
+        "moves": ["hyper-beam", "dragon-rage", "twister", "bite"],
+        "ability": "intimidate"
+      },
+      {
+        "pokemon_id": 148,
+        "name": "dragonair",
+        "level": 54,
+        "types": ["dragon"],
+        "moves": ["hyper-beam", "safeguard", "outrage", "dragon-rage"],
+        "ability": "shed-skin"
+      },
+      {
+        "pokemon_id": 148,
+        "name": "dragonair",
+        "level": 54,
+        "types": ["dragon"],
+        "moves": ["hyper-beam", "safeguard", "outrage", "thunder-wave"],
+        "ability": "shed-skin"
+      },
+      {
+        "pokemon_id": 142,
+        "name": "aerodactyl",
+        "level": 58,
+        "types": ["rock", "flying"],
+        "moves": ["hyper-beam", "ancient-power", "wing-attack", "scary-face"],
+        "ability": "rock-head"
+      },
+      {
+        "pokemon_id": 149,
+        "name": "dragonite",
+        "level": 60,
+        "types": ["dragon", "flying"],
+        "moves": ["hyper-beam", "outrage", "safeguard", "wing-attack"],
+        "ability": "inner-focus"
+      }
+    ]
+  },
+  {
+    "id": "champion",
+    "name": "Champion (Blue)",
+    "type": "champion",
+    "location": "indigo-plateau",
+    "pokemon": [
+      {
+        "pokemon_id": 18,
+        "name": "pidgeot",
+        "level": 59,
+        "types": ["normal", "flying"],
+        "moves": ["aerial-ace", "feather-dance", "sand-attack", "whirlwind"],
+        "ability": "keen-eye"
+      },
+      {
+        "pokemon_id": 65,
+        "name": "alakazam",
+        "level": 57,
+        "types": ["psychic"],
+        "moves": ["psychic", "future-sight", "reflect", "recover"],
+        "ability": "synchronize"
+      },
+      {
+        "pokemon_id": 112,
+        "name": "rhydon",
+        "level": 59,
+        "types": ["ground", "rock"],
+        "moves": ["earthquake", "take-down", "rock-tomb", "scary-face"],
+        "ability": "lightning-rod"
+      },
+      {
+        "pokemon_id": 130,
+        "name": "gyarados",
+        "level": 61,
+        "types": ["water", "flying"],
+        "moves": ["hydro-pump", "dragon-rage", "thrash", "bite"],
+        "ability": "intimidate"
+      },
+      {
+        "pokemon_id": 59,
+        "name": "arcanine",
+        "level": 59,
+        "types": ["fire"],
+        "moves": ["flamethrower", "extreme-speed", "bite", "roar"],
+        "ability": "intimidate"
+      },
+      {
+        "pokemon_id": 6,
+        "name": "charizard",
+        "level": 63,
+        "types": ["fire", "flying"],
+        "moves": ["flamethrower", "aerial-ace", "slash", "fire-spin"],
+        "ability": "blaze"
+      }
+    ]
+  }
+]

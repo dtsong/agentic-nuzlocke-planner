@@ -1,0 +1,599 @@
+[
+  {
+    "route_id": "pallet-town",
+    "methods": {
+      "gift": [
+        { "pokemon_id": 1, "name": "bulbasaur", "min_level": 5, "max_level": 5, "rate": 33 },
+        { "pokemon_id": 4, "name": "charmander", "min_level": 5, "max_level": 5, "rate": 33 },
+        { "pokemon_id": 7, "name": "squirtle", "min_level": 5, "max_level": 5, "rate": 34 }
+      ]
+    }
+  },
+  {
+    "route_id": "route-1",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 16, "name": "pidgey", "min_level": 2, "max_level": 5, "rate": 55 },
+        { "pokemon_id": 19, "name": "rattata", "min_level": 2, "max_level": 5, "rate": 45 }
+      ]
+    }
+  },
+  {
+    "route_id": "route-22",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 19, "name": "rattata", "min_level": 2, "max_level": 5, "rate": 45 },
+        { "pokemon_id": 56, "name": "mankey", "min_level": 2, "max_level": 5, "rate": 25 },
+        { "pokemon_id": 21, "name": "spearow", "min_level": 2, "max_level": 5, "rate": 25 },
+        { "pokemon_id": 29, "name": "nidoran-f", "min_level": 2, "max_level": 5, "rate": 5 }
+      ]
+    }
+  },
+  {
+    "route_id": "viridian-forest",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 10, "name": "caterpie", "min_level": 3, "max_level": 5, "rate": 40 },
+        { "pokemon_id": 11, "name": "metapod", "min_level": 4, "max_level": 6, "rate": 10 },
+        { "pokemon_id": 13, "name": "weedle", "min_level": 3, "max_level": 5, "rate": 25 },
+        { "pokemon_id": 14, "name": "kakuna", "min_level": 4, "max_level": 6, "rate": 10 },
+        { "pokemon_id": 25, "name": "pikachu", "min_level": 3, "max_level": 5, "rate": 5 },
+        { "pokemon_id": 16, "name": "pidgey", "min_level": 4, "max_level": 6, "rate": 10 }
+      ]
+    }
+  },
+  {
+    "route_id": "route-2",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 16, "name": "pidgey", "min_level": 3, "max_level": 5, "rate": 45 },
+        { "pokemon_id": 19, "name": "rattata", "min_level": 2, "max_level": 5, "rate": 45 },
+        { "pokemon_id": 10, "name": "caterpie", "min_level": 4, "max_level": 5, "rate": 5 },
+        { "pokemon_id": 13, "name": "weedle", "min_level": 4, "max_level": 5, "rate": 5 }
+      ]
+    }
+  },
+  {
+    "route_id": "route-3",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 16, "name": "pidgey", "min_level": 6, "max_level": 8, "rate": 30 },
+        { "pokemon_id": 21, "name": "spearow", "min_level": 6, "max_level": 8, "rate": 30 },
+        { "pokemon_id": 29, "name": "nidoran-f", "min_level": 6, "max_level": 8, "rate": 14 },
+        { "pokemon_id": 32, "name": "nidoran-m", "min_level": 6, "max_level": 8, "rate": 14 },
+        { "pokemon_id": 39, "name": "jigglypuff", "min_level": 3, "max_level": 7, "rate": 10 },
+        { "pokemon_id": 56, "name": "mankey", "min_level": 7, "max_level": 8, "rate": 2 }
+      ]
+    }
+  },
+  {
+    "route_id": "mt-moon-1f",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 41, "name": "zubat", "min_level": 7, "max_level": 10, "rate": 64 },
+        { "pokemon_id": 74, "name": "geodude", "min_level": 7, "max_level": 10, "rate": 25 },
+        { "pokemon_id": 35, "name": "clefairy", "min_level": 8, "max_level": 12, "rate": 6 },
+        { "pokemon_id": 46, "name": "paras", "min_level": 8, "max_level": 10, "rate": 5 }
+      ]
+    }
+  },
+  {
+    "route_id": "mt-moon-b1f",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 41, "name": "zubat", "min_level": 8, "max_level": 11, "rate": 64 },
+        { "pokemon_id": 74, "name": "geodude", "min_level": 8, "max_level": 11, "rate": 25 },
+        { "pokemon_id": 35, "name": "clefairy", "min_level": 9, "max_level": 12, "rate": 6 },
+        { "pokemon_id": 46, "name": "paras", "min_level": 10, "max_level": 12, "rate": 5 }
+      ]
+    }
+  },
+  {
+    "route_id": "mt-moon-b2f",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 41, "name": "zubat", "min_level": 9, "max_level": 12, "rate": 64 },
+        { "pokemon_id": 74, "name": "geodude", "min_level": 9, "max_level": 12, "rate": 25 },
+        { "pokemon_id": 35, "name": "clefairy", "min_level": 10, "max_level": 12, "rate": 6 },
+        { "pokemon_id": 46, "name": "paras", "min_level": 10, "max_level": 12, "rate": 5 }
+      ],
+      "gift": [
+        { "pokemon_id": 138, "name": "omanyte", "min_level": 5, "max_level": 5, "rate": 50 },
+        { "pokemon_id": 140, "name": "kabuto", "min_level": 5, "max_level": 5, "rate": 50 }
+      ]
+    }
+  },
+  {
+    "route_id": "route-4",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 19, "name": "rattata", "min_level": 8, "max_level": 12, "rate": 35 },
+        { "pokemon_id": 21, "name": "spearow", "min_level": 8, "max_level": 12, "rate": 35 },
+        { "pokemon_id": 23, "name": "ekans", "min_level": 8, "max_level": 12, "rate": 15 },
+        { "pokemon_id": 56, "name": "mankey", "min_level": 8, "max_level": 12, "rate": 15 }
+      ]
+    }
+  },
+  {
+    "route_id": "route-24",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 10, "name": "caterpie", "min_level": 7, "max_level": 8, "rate": 15 },
+        { "pokemon_id": 11, "name": "metapod", "min_level": 7, "max_level": 9, "rate": 5 },
+        { "pokemon_id": 13, "name": "weedle", "min_level": 7, "max_level": 8, "rate": 5 },
+        { "pokemon_id": 43, "name": "oddish", "min_level": 12, "max_level": 14, "rate": 25 },
+        { "pokemon_id": 63, "name": "abra", "min_level": 8, "max_level": 12, "rate": 15 },
+        { "pokemon_id": 16, "name": "pidgey", "min_level": 11, "max_level": 13, "rate": 35 }
+      ]
+    }
+  },
+  {
+    "route_id": "route-25",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 10, "name": "caterpie", "min_level": 8, "max_level": 9, "rate": 15 },
+        { "pokemon_id": 11, "name": "metapod", "min_level": 9, "max_level": 10, "rate": 5 },
+        { "pokemon_id": 13, "name": "weedle", "min_level": 8, "max_level": 9, "rate": 5 },
+        { "pokemon_id": 43, "name": "oddish", "min_level": 12, "max_level": 14, "rate": 25 },
+        { "pokemon_id": 63, "name": "abra", "min_level": 9, "max_level": 12, "rate": 15 },
+        { "pokemon_id": 16, "name": "pidgey", "min_level": 11, "max_level": 13, "rate": 35 }
+      ]
+    }
+  },
+  {
+    "route_id": "route-5",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 16, "name": "pidgey", "min_level": 13, "max_level": 16, "rate": 40 },
+        { "pokemon_id": 43, "name": "oddish", "min_level": 13, "max_level": 16, "rate": 35 },
+        { "pokemon_id": 52, "name": "meowth", "min_level": 10, "max_level": 16, "rate": 25 }
+      ]
+    }
+  },
+  {
+    "route_id": "route-6",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 16, "name": "pidgey", "min_level": 13, "max_level": 16, "rate": 40 },
+        { "pokemon_id": 43, "name": "oddish", "min_level": 13, "max_level": 16, "rate": 35 },
+        { "pokemon_id": 52, "name": "meowth", "min_level": 10, "max_level": 16, "rate": 25 }
+      ]
+    }
+  },
+  {
+    "route_id": "route-11",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 21, "name": "spearow", "min_level": 13, "max_level": 17, "rate": 35 },
+        { "pokemon_id": 23, "name": "ekans", "min_level": 11, "max_level": 17, "rate": 25 },
+        { "pokemon_id": 96, "name": "drowzee", "min_level": 11, "max_level": 17, "rate": 40 }
+      ]
+    }
+  },
+  {
+    "route_id": "digletts-cave",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 50, "name": "diglett", "min_level": 18, "max_level": 22, "rate": 95 },
+        { "pokemon_id": 51, "name": "dugtrio", "min_level": 29, "max_level": 31, "rate": 5 }
+      ]
+    }
+  },
+  {
+    "route_id": "route-9",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 19, "name": "rattata", "min_level": 14, "max_level": 17, "rate": 30 },
+        { "pokemon_id": 21, "name": "spearow", "min_level": 13, "max_level": 17, "rate": 30 },
+        { "pokemon_id": 23, "name": "ekans", "min_level": 11, "max_level": 17, "rate": 25 },
+        { "pokemon_id": 29, "name": "nidoran-f", "min_level": 11, "max_level": 17, "rate": 10 },
+        { "pokemon_id": 32, "name": "nidoran-m", "min_level": 11, "max_level": 17, "rate": 5 }
+      ]
+    }
+  },
+  {
+    "route_id": "route-10",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 21, "name": "spearow", "min_level": 13, "max_level": 17, "rate": 30 },
+        { "pokemon_id": 23, "name": "ekans", "min_level": 11, "max_level": 17, "rate": 5 },
+        { "pokemon_id": 100, "name": "voltorb", "min_level": 14, "max_level": 17, "rate": 40 },
+        { "pokemon_id": 81, "name": "magnemite", "min_level": 14, "max_level": 17, "rate": 25 }
+      ]
+    }
+  },
+  {
+    "route_id": "rock-tunnel-1f",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 41, "name": "zubat", "min_level": 15, "max_level": 18, "rate": 30 },
+        { "pokemon_id": 74, "name": "geodude", "min_level": 15, "max_level": 18, "rate": 25 },
+        { "pokemon_id": 56, "name": "mankey", "min_level": 15, "max_level": 17, "rate": 15 },
+        { "pokemon_id": 66, "name": "machop", "min_level": 15, "max_level": 17, "rate": 20 },
+        { "pokemon_id": 95, "name": "onix", "min_level": 15, "max_level": 17, "rate": 10 }
+      ]
+    }
+  },
+  {
+    "route_id": "rock-tunnel-b1f",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 41, "name": "zubat", "min_level": 15, "max_level": 18, "rate": 30 },
+        { "pokemon_id": 74, "name": "geodude", "min_level": 15, "max_level": 18, "rate": 25 },
+        { "pokemon_id": 56, "name": "mankey", "min_level": 15, "max_level": 17, "rate": 10 },
+        { "pokemon_id": 66, "name": "machop", "min_level": 15, "max_level": 17, "rate": 25 },
+        { "pokemon_id": 95, "name": "onix", "min_level": 13, "max_level": 17, "rate": 10 }
+      ]
+    }
+  },
+  {
+    "route_id": "route-8",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 16, "name": "pidgey", "min_level": 18, "max_level": 20, "rate": 30 },
+        { "pokemon_id": 52, "name": "meowth", "min_level": 18, "max_level": 20, "rate": 15 },
+        { "pokemon_id": 23, "name": "ekans", "min_level": 17, "max_level": 19, "rate": 5 },
+        { "pokemon_id": 58, "name": "growlithe", "min_level": 15, "max_level": 18, "rate": 25 },
+        { "pokemon_id": 96, "name": "drowzee", "min_level": 17, "max_level": 19, "rate": 15 },
+        { "pokemon_id": 92, "name": "gastly", "min_level": 17, "max_level": 19, "rate": 10 }
+      ]
+    }
+  },
+  {
+    "route_id": "route-7",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 16, "name": "pidgey", "min_level": 19, "max_level": 22, "rate": 30 },
+        { "pokemon_id": 52, "name": "meowth", "min_level": 17, "max_level": 20, "rate": 20 },
+        { "pokemon_id": 43, "name": "oddish", "min_level": 19, "max_level": 22, "rate": 30 },
+        { "pokemon_id": 58, "name": "growlithe", "min_level": 18, "max_level": 20, "rate": 20 }
+      ]
+    }
+  },
+  {
+    "route_id": "celadon-city",
+    "methods": {
+      "gift": [
+        { "pokemon_id": 133, "name": "eevee", "min_level": 25, "max_level": 25, "rate": 100 }
+      ]
+    }
+  },
+  {
+    "route_id": "celadon-game-corner",
+    "methods": {
+      "gift": [
+        { "pokemon_id": 63, "name": "abra", "min_level": 9, "max_level": 9, "rate": 25 },
+        { "pokemon_id": 35, "name": "clefairy", "min_level": 8, "max_level": 8, "rate": 25 },
+        { "pokemon_id": 147, "name": "dratini", "min_level": 18, "max_level": 18, "rate": 25 },
+        { "pokemon_id": 123, "name": "scyther", "min_level": 25, "max_level": 25, "rate": 25 }
+      ]
+    }
+  },
+  {
+    "route_id": "route-16",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 19, "name": "rattata", "min_level": 18, "max_level": 22, "rate": 30 },
+        { "pokemon_id": 21, "name": "spearow", "min_level": 18, "max_level": 22, "rate": 30 },
+        { "pokemon_id": 84, "name": "doduo", "min_level": 18, "max_level": 22, "rate": 25 },
+        { "pokemon_id": 143, "name": "snorlax", "min_level": 30, "max_level": 30, "rate": 0 }
+      ],
+      "static": [
+        { "pokemon_id": 143, "name": "snorlax", "min_level": 30, "max_level": 30, "rate": 100 }
+      ]
+    }
+  },
+  {
+    "route_id": "route-12",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 43, "name": "oddish", "min_level": 22, "max_level": 26, "rate": 25 },
+        { "pokemon_id": 16, "name": "pidgey", "min_level": 23, "max_level": 27, "rate": 30 },
+        { "pokemon_id": 44, "name": "gloom", "min_level": 26, "max_level": 30, "rate": 15 },
+        { "pokemon_id": 48, "name": "venonat", "min_level": 24, "max_level": 26, "rate": 30 }
+      ],
+      "static": [
+        { "pokemon_id": 143, "name": "snorlax", "min_level": 30, "max_level": 30, "rate": 100 }
+      ]
+    }
+  },
+  {
+    "route_id": "route-13",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 43, "name": "oddish", "min_level": 22, "max_level": 26, "rate": 30 },
+        { "pokemon_id": 44, "name": "gloom", "min_level": 26, "max_level": 30, "rate": 10 },
+        { "pokemon_id": 16, "name": "pidgey", "min_level": 25, "max_level": 27, "rate": 20 },
+        { "pokemon_id": 17, "name": "pidgeotto", "min_level": 27, "max_level": 29, "rate": 5 },
+        { "pokemon_id": 48, "name": "venonat", "min_level": 24, "max_level": 26, "rate": 25 },
+        { "pokemon_id": 132, "name": "ditto", "min_level": 25, "max_level": 25, "rate": 10 }
+      ]
+    }
+  },
+  {
+    "route_id": "route-14",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 43, "name": "oddish", "min_level": 22, "max_level": 26, "rate": 30 },
+        { "pokemon_id": 44, "name": "gloom", "min_level": 26, "max_level": 30, "rate": 10 },
+        { "pokemon_id": 16, "name": "pidgey", "min_level": 25, "max_level": 27, "rate": 15 },
+        { "pokemon_id": 48, "name": "venonat", "min_level": 24, "max_level": 26, "rate": 30 },
+        { "pokemon_id": 132, "name": "ditto", "min_level": 23, "max_level": 25, "rate": 15 }
+      ]
+    }
+  },
+  {
+    "route_id": "route-15",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 43, "name": "oddish", "min_level": 22, "max_level": 26, "rate": 30 },
+        { "pokemon_id": 44, "name": "gloom", "min_level": 26, "max_level": 30, "rate": 10 },
+        { "pokemon_id": 16, "name": "pidgey", "min_level": 25, "max_level": 27, "rate": 20 },
+        { "pokemon_id": 48, "name": "venonat", "min_level": 24, "max_level": 26, "rate": 30 },
+        { "pokemon_id": 132, "name": "ditto", "min_level": 23, "max_level": 25, "rate": 10 }
+      ]
+    }
+  },
+  {
+    "route_id": "safari-zone-area-1",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 29, "name": "nidoran-f", "min_level": 22, "max_level": 24, "rate": 20 },
+        { "pokemon_id": 32, "name": "nidoran-m", "min_level": 22, "max_level": 24, "rate": 10 },
+        { "pokemon_id": 30, "name": "nidorina", "min_level": 26, "max_level": 30, "rate": 10 },
+        { "pokemon_id": 84, "name": "doduo", "min_level": 22, "max_level": 24, "rate": 15 },
+        { "pokemon_id": 46, "name": "paras", "min_level": 22, "max_level": 24, "rate": 15 },
+        { "pokemon_id": 102, "name": "exeggcute", "min_level": 24, "max_level": 27, "rate": 20 },
+        { "pokemon_id": 111, "name": "rhyhorn", "min_level": 25, "max_level": 27, "rate": 10 }
+      ]
+    }
+  },
+  {
+    "route_id": "safari-zone-area-2",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 29, "name": "nidoran-f", "min_level": 22, "max_level": 24, "rate": 10 },
+        { "pokemon_id": 32, "name": "nidoran-m", "min_level": 22, "max_level": 24, "rate": 10 },
+        { "pokemon_id": 33, "name": "nidorino", "min_level": 26, "max_level": 30, "rate": 5 },
+        { "pokemon_id": 48, "name": "venonat", "min_level": 22, "max_level": 24, "rate": 20 },
+        { "pokemon_id": 102, "name": "exeggcute", "min_level": 25, "max_level": 27, "rate": 20 },
+        { "pokemon_id": 123, "name": "scyther", "min_level": 25, "max_level": 27, "rate": 5 },
+        { "pokemon_id": 113, "name": "chansey", "min_level": 23, "max_level": 27, "rate": 4 },
+        { "pokemon_id": 115, "name": "kangaskhan", "min_level": 25, "max_level": 28, "rate": 6 },
+        { "pokemon_id": 128, "name": "tauros", "min_level": 25, "max_level": 28, "rate": 10 },
+        { "pokemon_id": 111, "name": "rhyhorn", "min_level": 25, "max_level": 27, "rate": 10 }
+      ]
+    }
+  },
+  {
+    "route_id": "safari-zone-area-3",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 29, "name": "nidoran-f", "min_level": 25, "max_level": 27, "rate": 15 },
+        { "pokemon_id": 32, "name": "nidoran-m", "min_level": 25, "max_level": 27, "rate": 15 },
+        { "pokemon_id": 102, "name": "exeggcute", "min_level": 24, "max_level": 27, "rate": 20 },
+        { "pokemon_id": 47, "name": "parasect", "min_level": 27, "max_level": 30, "rate": 10 },
+        { "pokemon_id": 49, "name": "venomoth", "min_level": 28, "max_level": 32, "rate": 5 },
+        { "pokemon_id": 111, "name": "rhyhorn", "min_level": 26, "max_level": 28, "rate": 15 },
+        { "pokemon_id": 113, "name": "chansey", "min_level": 26, "max_level": 28, "rate": 4 },
+        { "pokemon_id": 128, "name": "tauros", "min_level": 28, "max_level": 30, "rate": 6 },
+        { "pokemon_id": 115, "name": "kangaskhan", "min_level": 25, "max_level": 28, "rate": 10 }
+      ]
+    }
+  },
+  {
+    "route_id": "safari-zone-area-4",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 48, "name": "venonat", "min_level": 22, "max_level": 26, "rate": 20 },
+        { "pokemon_id": 84, "name": "doduo", "min_level": 22, "max_level": 26, "rate": 15 },
+        { "pokemon_id": 102, "name": "exeggcute", "min_level": 23, "max_level": 26, "rate": 20 },
+        { "pokemon_id": 111, "name": "rhyhorn", "min_level": 26, "max_level": 28, "rate": 10 },
+        { "pokemon_id": 113, "name": "chansey", "min_level": 23, "max_level": 27, "rate": 1 },
+        { "pokemon_id": 128, "name": "tauros", "min_level": 26, "max_level": 28, "rate": 4 },
+        { "pokemon_id": 127, "name": "pinsir", "min_level": 23, "max_level": 27, "rate": 0 },
+        { "pokemon_id": 123, "name": "scyther", "min_level": 25, "max_level": 27, "rate": 5 },
+        { "pokemon_id": 46, "name": "paras", "min_level": 22, "max_level": 26, "rate": 15 },
+        { "pokemon_id": 115, "name": "kangaskhan", "min_level": 25, "max_level": 28, "rate": 10 }
+      ]
+    }
+  },
+  {
+    "route_id": "power-plant",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 100, "name": "voltorb", "min_level": 29, "max_level": 33, "rate": 30 },
+        { "pokemon_id": 25, "name": "pikachu", "min_level": 29, "max_level": 33, "rate": 25 },
+        { "pokemon_id": 81, "name": "magnemite", "min_level": 29, "max_level": 33, "rate": 25 },
+        { "pokemon_id": 82, "name": "magneton", "min_level": 31, "max_level": 35, "rate": 10 },
+        { "pokemon_id": 125, "name": "electabuzz", "min_level": 32, "max_level": 35, "rate": 5 },
+        { "pokemon_id": 101, "name": "electrode", "min_level": 34, "max_level": 34, "rate": 5 }
+      ],
+      "static": [
+        { "pokemon_id": 145, "name": "zapdos", "min_level": 50, "max_level": 50, "rate": 100 }
+      ]
+    }
+  },
+  {
+    "route_id": "pokemon-tower",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 92, "name": "gastly", "min_level": 20, "max_level": 27, "rate": 85 },
+        { "pokemon_id": 93, "name": "haunter", "min_level": 25, "max_level": 30, "rate": 10 },
+        { "pokemon_id": 104, "name": "cubone", "min_level": 20, "max_level": 25, "rate": 5 }
+      ]
+    }
+  },
+  {
+    "route_id": "route-17",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 21, "name": "spearow", "min_level": 20, "max_level": 22, "rate": 25 },
+        { "pokemon_id": 22, "name": "fearow", "min_level": 25, "max_level": 29, "rate": 15 },
+        { "pokemon_id": 84, "name": "doduo", "min_level": 24, "max_level": 28, "rate": 35 },
+        { "pokemon_id": 85, "name": "dodrio", "min_level": 28, "max_level": 32, "rate": 10 },
+        { "pokemon_id": 19, "name": "rattata", "min_level": 22, "max_level": 25, "rate": 10 },
+        { "pokemon_id": 20, "name": "raticate", "min_level": 25, "max_level": 29, "rate": 5 }
+      ]
+    }
+  },
+  {
+    "route_id": "route-18",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 21, "name": "spearow", "min_level": 20, "max_level": 22, "rate": 25 },
+        { "pokemon_id": 22, "name": "fearow", "min_level": 25, "max_level": 29, "rate": 15 },
+        { "pokemon_id": 84, "name": "doduo", "min_level": 24, "max_level": 28, "rate": 35 },
+        { "pokemon_id": 85, "name": "dodrio", "min_level": 28, "max_level": 32, "rate": 10 },
+        { "pokemon_id": 19, "name": "rattata", "min_level": 22, "max_level": 25, "rate": 10 },
+        { "pokemon_id": 20, "name": "raticate", "min_level": 25, "max_level": 29, "rate": 5 }
+      ]
+    }
+  },
+  {
+    "route_id": "silph-co",
+    "methods": {
+      "gift": [
+        { "pokemon_id": 131, "name": "lapras", "min_level": 25, "max_level": 25, "rate": 100 }
+      ]
+    }
+  },
+  {
+    "route_id": "fighting-dojo",
+    "methods": {
+      "gift": [
+        { "pokemon_id": 106, "name": "hitmonlee", "min_level": 25, "max_level": 25, "rate": 50 },
+        { "pokemon_id": 107, "name": "hitmonchan", "min_level": 25, "max_level": 25, "rate": 50 }
+      ]
+    }
+  },
+  {
+    "route_id": "route-19",
+    "methods": {
+      "surfing": [
+        { "pokemon_id": 72, "name": "tentacool", "min_level": 5, "max_level": 40, "rate": 100 }
+      ]
+    }
+  },
+  {
+    "route_id": "route-20",
+    "methods": {
+      "surfing": [
+        { "pokemon_id": 72, "name": "tentacool", "min_level": 5, "max_level": 40, "rate": 100 }
+      ]
+    }
+  },
+  {
+    "route_id": "seafoam-islands",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 41, "name": "zubat", "min_level": 26, "max_level": 30, "rate": 25 },
+        { "pokemon_id": 42, "name": "golbat", "min_level": 30, "max_level": 34, "rate": 15 },
+        { "pokemon_id": 86, "name": "seel", "min_level": 26, "max_level": 32, "rate": 25 },
+        { "pokemon_id": 87, "name": "dewgong", "min_level": 32, "max_level": 34, "rate": 5 },
+        { "pokemon_id": 90, "name": "shellder", "min_level": 26, "max_level": 30, "rate": 10 },
+        { "pokemon_id": 116, "name": "horsea", "min_level": 26, "max_level": 30, "rate": 10 },
+        { "pokemon_id": 54, "name": "psyduck", "min_level": 28, "max_level": 32, "rate": 5 },
+        { "pokemon_id": 79, "name": "slowpoke", "min_level": 28, "max_level": 32, "rate": 5 }
+      ],
+      "static": [
+        { "pokemon_id": 144, "name": "articuno", "min_level": 50, "max_level": 50, "rate": 100 }
+      ]
+    }
+  },
+  {
+    "route_id": "route-21",
+    "methods": {
+      "surfing": [
+        { "pokemon_id": 72, "name": "tentacool", "min_level": 5, "max_level": 40, "rate": 100 }
+      ]
+    }
+  },
+  {
+    "route_id": "pokemon-mansion",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 77, "name": "ponyta", "min_level": 28, "max_level": 34, "rate": 15 },
+        { "pokemon_id": 58, "name": "growlithe", "min_level": 32, "max_level": 36, "rate": 25 },
+        { "pokemon_id": 109, "name": "koffing", "min_level": 28, "max_level": 32, "rate": 20 },
+        { "pokemon_id": 88, "name": "grimer", "min_level": 28, "max_level": 30, "rate": 15 },
+        { "pokemon_id": 110, "name": "weezing", "min_level": 32, "max_level": 34, "rate": 5 },
+        { "pokemon_id": 126, "name": "magmar", "min_level": 34, "max_level": 36, "rate": 0 },
+        { "pokemon_id": 132, "name": "ditto", "min_level": 30, "max_level": 34, "rate": 20 }
+      ]
+    }
+  },
+  {
+    "route_id": "cinnabar-lab",
+    "methods": {
+      "gift": [
+        { "pokemon_id": 138, "name": "omanyte", "min_level": 5, "max_level": 5, "rate": 33 },
+        { "pokemon_id": 140, "name": "kabuto", "min_level": 5, "max_level": 5, "rate": 33 },
+        { "pokemon_id": 142, "name": "aerodactyl", "min_level": 5, "max_level": 5, "rate": 34 }
+      ]
+    }
+  },
+  {
+    "route_id": "victory-road-1f",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 66, "name": "machop", "min_level": 32, "max_level": 36, "rate": 15 },
+        { "pokemon_id": 74, "name": "geodude", "min_level": 32, "max_level": 36, "rate": 25 },
+        { "pokemon_id": 41, "name": "zubat", "min_level": 32, "max_level": 36, "rate": 25 },
+        { "pokemon_id": 95, "name": "onix", "min_level": 36, "max_level": 40, "rate": 15 },
+        { "pokemon_id": 67, "name": "machoke", "min_level": 36, "max_level": 40, "rate": 10 },
+        { "pokemon_id": 75, "name": "graveler", "min_level": 36, "max_level": 40, "rate": 10 }
+      ]
+    }
+  },
+  {
+    "route_id": "victory-road-2f",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 66, "name": "machop", "min_level": 32, "max_level": 36, "rate": 10 },
+        { "pokemon_id": 74, "name": "geodude", "min_level": 32, "max_level": 36, "rate": 20 },
+        { "pokemon_id": 41, "name": "zubat", "min_level": 32, "max_level": 36, "rate": 20 },
+        { "pokemon_id": 95, "name": "onix", "min_level": 36, "max_level": 42, "rate": 15 },
+        { "pokemon_id": 67, "name": "machoke", "min_level": 38, "max_level": 42, "rate": 15 },
+        { "pokemon_id": 75, "name": "graveler", "min_level": 38, "max_level": 42, "rate": 15 },
+        { "pokemon_id": 105, "name": "marowak", "min_level": 40, "max_level": 44, "rate": 5 }
+      ]
+    }
+  },
+  {
+    "route_id": "victory-road-3f",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 66, "name": "machop", "min_level": 34, "max_level": 38, "rate": 10 },
+        { "pokemon_id": 74, "name": "geodude", "min_level": 34, "max_level": 38, "rate": 20 },
+        { "pokemon_id": 41, "name": "zubat", "min_level": 34, "max_level": 38, "rate": 20 },
+        { "pokemon_id": 95, "name": "onix", "min_level": 40, "max_level": 44, "rate": 15 },
+        { "pokemon_id": 67, "name": "machoke", "min_level": 40, "max_level": 44, "rate": 15 },
+        { "pokemon_id": 75, "name": "graveler", "min_level": 40, "max_level": 44, "rate": 15 },
+        { "pokemon_id": 105, "name": "marowak", "min_level": 42, "max_level": 46, "rate": 5 }
+      ],
+      "static": [
+        { "pokemon_id": 146, "name": "moltres", "min_level": 50, "max_level": 50, "rate": 100 }
+      ]
+    }
+  },
+  {
+    "route_id": "cerulean-cave",
+    "methods": {
+      "walking": [
+        { "pokemon_id": 42, "name": "golbat", "min_level": 46, "max_level": 56, "rate": 25 },
+        { "pokemon_id": 55, "name": "golduck", "min_level": 52, "max_level": 56, "rate": 15 },
+        { "pokemon_id": 64, "name": "kadabra", "min_level": 46, "max_level": 56, "rate": 15 },
+        { "pokemon_id": 97, "name": "hypno", "min_level": 46, "max_level": 56, "rate": 10 },
+        { "pokemon_id": 82, "name": "magneton", "min_level": 46, "max_level": 52, "rate": 5 },
+        { "pokemon_id": 101, "name": "electrode", "min_level": 46, "max_level": 52, "rate": 5 },
+        { "pokemon_id": 132, "name": "ditto", "min_level": 46, "max_level": 56, "rate": 15 },
+        { "pokemon_id": 112, "name": "rhydon", "min_level": 52, "max_level": 56, "rate": 5 },
+        { "pokemon_id": 53, "name": "persian", "min_level": 46, "max_level": 52, "rate": 5 }
+      ],
+      "static": [
+        { "pokemon_id": 150, "name": "mewtwo", "min_level": 70, "max_level": 70, "rate": 100 }
+      ]
+    }
+  }
+]
