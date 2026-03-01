@@ -174,14 +174,18 @@ describe("LeafGreen encounters.json", () => {
 
   it("should include Bellsprout as a LG exclusive (replacing Oddish)", () => {
     const hassBellsprout = leafGreenEncounters.some((route) =>
-      Object.values(route.methods).some((entries) => entries.some((e) => e.pokemon_id === 69)),
+      Object.values(route.methods).some((entries) =>
+        entries.some((e: { pokemon_id: number }) => e.pokemon_id === 69),
+      ),
     );
     expect(hassBellsprout).toBe(true);
   });
 
   it("should include Vulpix as a LG exclusive (replacing Growlithe)", () => {
     const hasVulpix = leafGreenEncounters.some((route) =>
-      Object.values(route.methods).some((entries) => entries.some((e) => e.pokemon_id === 37)),
+      Object.values(route.methods).some((entries) =>
+        entries.some((e: { pokemon_id: number }) => e.pokemon_id === 37),
+      ),
     );
     expect(hasVulpix).toBe(true);
   });
@@ -189,7 +193,9 @@ describe("LeafGreen encounters.json", () => {
   it("should include Pinsir as a LG exclusive (replacing Scyther)", () => {
     const hasPinsir = leafGreenEncounters.some((route) =>
       Object.values(route.methods).some((entries) =>
-        entries.some((e) => e.pokemon_id === 127 && e.rate > 0),
+        entries.some(
+          (e: { pokemon_id: number; rate: number }) => e.pokemon_id === 127 && e.rate > 0,
+        ),
       ),
     );
     expect(hasPinsir).toBe(true);
