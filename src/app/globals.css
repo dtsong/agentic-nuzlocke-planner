@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+/* ============================================
+   Field Journal Design System
+   A seasoned trainer's expedition notebook
+   ============================================ */
+
+@theme inline {
+  /* Surface colors - dark leather palette */
+  --color-surface: #1A1410;
+  --color-surface-raised: #2A2118;
+  --color-surface-overlay: #3D2E1E;
+
+  /* Text colors */
+  --color-text-primary: #E8CC8A;
+  --color-text-body: #C4A882;
+  --color-text-muted: #8A8070;
+
+  /* Accent */
+  --color-accent: #D4A843;
+  --color-accent-hover: #E0B84F;
+
+  /* State colors */
+  --color-state-alive: #5A8A5A;
+  --color-state-death: #C0392B;
+  --color-state-boxed: #8A8070;
+
+  /* Background / Foreground aliases */
+  --color-background: var(--color-surface);
+  --color-foreground: var(--color-text-primary);
+
+  /* Fonts */
+  --font-display: var(--font-playfair-display);
+  --font-mono: var(--font-dm-mono);
+
+  /* Border radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+}
+
+/* Base styles */
+body {
+  background: var(--color-surface);
+  color: var(--color-text-body);
+  font-family: var(--font-display), serif;
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+}
